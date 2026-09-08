@@ -44,8 +44,8 @@ jobs:
         uses: codescan-io/codescan-scanner-action@1.6
         with:
           scanChangedFilesOnly: true
-          organization: user-license
-          projectKey: profiles-gitacts
+          organization: prof
+          projectKey: profile-ar
           codeScanUrl: https://test.codescan.io/
           login: ${{ secrets.CODESCAN_TOKEN }}
           generateSarifFile: true
@@ -55,8 +55,8 @@ jobs:
         uses: codescan-io/codescan-scanner-action@1.6
         with:
           scanChangedFilesOnly: true
-          organization: user-license
-          projectKey: profiles-gitacts
+          organization: prof
+          projectKey: profile-ar
           codeScanUrl: https://test.codescan.io/
           login: ${{ secrets.CODESCAN_TOKEN }}
           generateSarifFile: true
