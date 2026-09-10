@@ -1,0 +1,35 @@
+name: CodeScan Analysis
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  codescan:
+    name: Run CodeScan Analysis
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify Git History
+        run: |
+          echo "Current commit:"
+          git rev-parse HEAD
+
+          echo "Available branches:"
+          git branch -a
+
+          echo "Recent commits:"
+          git log --oneline --all -20
+
+      - name: Run CodeScan
+        uses: codescan-io/codescan-scanner-action@1.6
+        with:
+          organization: ${{ secrets.CODESCAN_ORGANIZATION }}
+          projectKey: ${{ secrets.CODESCAN_PROJECT_KEY }}
+          login: ${{ secrets.CODESCAN_TOKEN }}
