@@ -44,10 +44,10 @@ jobs:
         uses: codescan-io/codescan-scanner-action@1.6
         with:
           scanChangedFilesOnly: true
-          organization: prof
-          projectKey: profile-ar
+          organization: user-based-billing
+          projectKey: gh-actions2
           codeScanUrl: https://test.codescan.io/
-          login: ${{ secrets.CODESCAN_TOKEN }}
+          login: squ_a75d281e1001a5ecbabc2c8a468e20ff286cff8a
           generateSarifFile: true
 
       - name: Run Codescan On PR
@@ -55,10 +55,10 @@ jobs:
         uses: codescan-io/codescan-scanner-action@1.6
         with:
           scanChangedFilesOnly: true
-          organization: prof
-          projectKey: profile-ar
+          organization: user-based-billing
+          projectKey: gh-actions2
           codeScanUrl: https://test.codescan.io/
-          login: ${{ secrets.CODESCAN_TOKEN }}
+          login: squ_a75d281e1001a5ecbabc2c8a468e20ff286cff8a
           generateSarifFile: true
           args: |
             sonar.pullrequest.branch=${{ github.head_ref }}
