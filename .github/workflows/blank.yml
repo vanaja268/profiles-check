@@ -31,6 +31,22 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch PR base branch
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "PR branch: ${{ github.head_ref }}"
+          echo "Base branch: ${{ github.base_ref }}"
+
+          git fetch origin "${{ github.base_ref }}"
+
+          echo "Available branches:"
+          git branch -a
+
+          echo "Recent commits:"
+          git log --oneline --all -20
 
       - name: Cache files
         uses: actions/cache@v4

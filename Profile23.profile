@@ -11158,11 +11158,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Obj431__c.Field02231__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Obj432__c.Field02232__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -21605,11 +21600,6 @@
         <editable>true</editable>
         <field>Obj720__c.Field04320__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Obj721__c.Field04321__c</field>
-        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
